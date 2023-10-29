@@ -62,6 +62,35 @@ public class mlbConstruct {
         return lines;
         
     }
+    /*
+    NB NEW DELETE METHOD
+
+        public void deletePlayer(int index) {
+        if (index < 0 || index >= LinkedList.getLength(lines)) {
+            System.out.println("Invalid index. Player not found in the list.");
+            return;
+        }
+
+        if (index == 0) {
+            // If the player to delete is the head of the list
+            lines.head = lines.head.next;
+        } else {
+            Node current = lines.head;
+            int currentIndex = 0;
+            while (currentIndex < index - 1) {
+                current = current.next;
+                currentIndex++;
+            }
+
+            if (current.next != null) {
+                current.next = current.next.next;
+            }
+        }
+        System.out.println("Player at index " + index + " has been deleted.");
+    }
+
+
+    */
 
     /* 
     //create delete method that will also resize aray for optimal storage overtime
