@@ -1,5 +1,8 @@
 package com.mycompany.csse240prj1;
 
+/*
+ * CREDIT!!
+ */
 public class LinkedList {
     Node head;
 
@@ -28,9 +31,11 @@ public class LinkedList {
         }
         return list;
     }
+
     public static LinkedList delete(LinkedList list, int entry){
         return list;
     }
+    
     public static void printList(LinkedList list) {
         Node node = list.head;
 
