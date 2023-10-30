@@ -48,7 +48,7 @@ public class mlbConstruct {
                 String[] tempArray = new String[4];
                 tempArray = line.split(", ");
                 Player player = new Player(tempArray[0], tempArray[1], tempArray[2], Integer.parseInt(tempArray[3]));
-                LinkedList.insert(lines, player);
+                LinkedList.insertPlayer(lines, player);
             }
             // Close the file
             reader.close();
@@ -62,61 +62,7 @@ public class mlbConstruct {
         return lines;
         
     }
-    /*
-    NB NEW DELETE METHOD
-
-        public void deletePlayer(int index) {
-        if (index < 0 || index >= LinkedList.getLength(lines)) {
-            System.out.println("Invalid index. Player not found in the list.");
-            return;
-        }
-
-        if (index == 0) {
-            // If the player to delete is the head of the list
-            lines.head = lines.head.next;
-        } else {
-            Node current = lines.head;
-            int currentIndex = 0;
-            while (currentIndex < index - 1) {
-                current = current.next;
-                currentIndex++;
-            }
-
-            if (current.next != null) {
-                current.next = current.next.next;
-            }
-        }
-        System.out.println("Player at index " + index + " has been deleted.");
-    }
-
-
-    */
-
     /* 
-    //create delete method that will also resize aray for optimal storage overtime
-    public void delete(int delete) {
-        //declare copy array
-        Player arrCopy[];
-
-        for (int i = 0; i < lines.length; i++) {
-            //if line wanted deleted found, copy elements from original array to new array up to said element
-            if (i == delete - 1) {
-                arrCopy = new Player[lines.length - 1];
-                //system.arraycopy takes 4 arguments (former array, starting position to copy, new array, new start of copy, length of elements)
-                //this copies all elements up to line before deletion line
-                System.arraycopy(this.lines, 0, arrCopy, 0, i);
-                //if arrcopy length - index (i) is = or greater than 0. copy this.array at position over deletion line  shifted back one to new array
-                if (arrCopy.length - i >= 0) {
-                    System.arraycopy(this.lines, i + 1, arrCopy, i, arrCopy.length - i);
-                    //store this new array beck into this.array
-                    this.lines = arrCopy;
-                }
-            }
-        }
-            //show user modified data *had issue with including in for loop*
-            printArray();
-    }
-
     //this is the method that will both istantiate an instance from sort class and start the sort script for dataset
     public void arraySort(){
         //the arguments here will be passed to sort class and will assume 0 is the lowest index of the list for this case

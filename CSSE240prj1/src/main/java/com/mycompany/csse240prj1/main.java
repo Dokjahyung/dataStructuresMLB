@@ -50,7 +50,7 @@ public class main {
 
                     //call add method
                     Player mlbPlayer = new Player(mlbName, mlbTeam, mlbSeason, mlbPosition);
-                    LinkedList.insert(mlbList, mlbPlayer);
+                    mlbList = LinkedList.insertPlayer(mlbList, mlbPlayer);
                     LinkedList.printList(mlbList);
                     break;
                     //calls delete method from mlbArray class w/ following info
@@ -58,7 +58,7 @@ public class main {
                     // prompt user to input specific line they want to delete and then call delete method for made array
                     System.out.println("Which line would you like to delete?");
                     int del = scan.nextInt();
-                    mlbList = LinkedList.delete(mlbList, del);
+                    mlbList = LinkedList.deletePlayer(mlbList, del);
                     break;
                 case 'p':
                     //allow an option for created array to be shown multiple times for user as needed
@@ -66,7 +66,8 @@ public class main {
                      break;
                 case 's':
                     //call the array sort method in mlbArray class
-                    //mlbA.arraySort();
+                    sort sort = new sort();
+                    LinkedList.printList(sort.listSort(mlbList, 0, mlbList.getLength()-2));
                     break;
                 case 'q':
                     //call the array search method in mlbArray

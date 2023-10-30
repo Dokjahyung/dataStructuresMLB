@@ -6,7 +6,7 @@ package com.mycompany.csse240prj1;
 public class LinkedList {
     Node head;
 
-    static class Node{
+    public class Node{
         Player data;
         Node next;
 
@@ -16,7 +16,7 @@ public class LinkedList {
         }
     }
 
-    public static LinkedList insert(LinkedList list, Player data) {
+    public static LinkedList insertPlayer(LinkedList list, Player data) {
         Node newNode = new Node(data);
         if (list.head == null){
             list.head  = newNode;
@@ -32,9 +32,29 @@ public class LinkedList {
         return list;
     }
 
-    public static LinkedList delete(LinkedList list, int entry){
+    public static LinkedList deletePlayer(LinkedList list, int index) {
+        if (index <= 0 || index >= list.getLength()) {
+            System.out.println("Invalid index. Player not found in the list.");
+            return list;
+        }
+        if (index == 1) {
+            // If the player to delete is the head of the list
+            list.head = list.head.next;
+        } else {
+            Node current = list.head;
+            int currentIndex = 0;
+            while (currentIndex < index - 1) {
+                current = current.next;
+                currentIndex++;
+            }
+            if (current.next != null) {
+                current.next = current.next.next;
+            }
+        }
+        System.out.println("Player at index " + index + " has been deleted.");
         return list;
     }
+    
     
     public static void printList(LinkedList list) {
         Node node = list.head;
@@ -45,13 +65,27 @@ public class LinkedList {
         }
     }
 
-    public static int listSize(LinkedList list){
+    public int getLength() {
         int size = 0;
-        while (list.head != null){
+        Node current = this.head;
+        while (current != null) {
             size++;
-            list.head = list.head.next;
+            current = current.next;
         }
         return size;
+    }
+
+    public Node getNode(int index){
+        Node current = this.head;
+        int count = 0;
+        while (current != null && current.next != null){
+            if (count == index){
+                return current;
+            }
+            current = current.next;
+        }
+        return current;
+
     }
     
     /*
