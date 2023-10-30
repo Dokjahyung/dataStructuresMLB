@@ -2,6 +2,8 @@ package com.mycompany.csse240prj1;
 
 /*
  * CREDIT!!
+ * 
+ * used GeekforGeek for basic structure of list knowledge
  */
 public class LinkedList {
     //every snake needs a head and so should lists to start iterating.

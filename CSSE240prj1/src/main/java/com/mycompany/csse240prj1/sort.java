@@ -3,6 +3,13 @@ package com.mycompany.csse240prj1;
 import java.util.Scanner;
 import java.util.Comparator;
 
+/*
+ * CREDIT!!
+ * 
+ * used GeekforGeek for basic structure of list knowledge as well as used majority of code from GeekforGeek website
+ * used https://www.youtube.com/watch?v=pNTc1bM1z-4&t=421s for insight on potential options for types of sorting
+ * Chat GPT helped testing issues with partitioning
+ */
 // A generic sorting class
 public class sort<T>{
 
