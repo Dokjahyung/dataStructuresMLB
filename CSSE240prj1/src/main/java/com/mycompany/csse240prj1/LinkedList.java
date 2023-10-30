@@ -4,25 +4,32 @@ package com.mycompany.csse240prj1;
  * CREDIT!!
  */
 public class LinkedList {
+    //every snake needs a head and so should lists to start iterating.
     Node head;
 
+    // Method to insert a Player at the end of the list
     public static LinkedList insertPlayer(LinkedList list, Player data) {
+        //create new node with given data value to be inserted
         Node newNode = new Node(data);
+        //check if list is empty
         if (list.head == null){
+            //if empty insert node into empty list
             list.head  = newNode;
         }
         else {
+            //iterate through list to find last node in list and add after
             Node last = list.head;
             while (last.next != null){
                 last = last.next;
             }
-
             last.next = newNode;
         }
         return list;
     }
 
+    // Method to delete a Player at a specific index
     public static LinkedList deletePlayer(LinkedList list, int index) {
+        //error check for invalid indexes
         if (index <= 0 || index >= list.getLength()) {
             System.out.println("Invalid index. Player not found in the list.");
             return list;
@@ -31,12 +38,14 @@ public class LinkedList {
             // If the player to delete is the head of the list
             list.head = list.head.next;
         } else {
+            //intitialize node that will edit
             Node current = list.head;
             int currentIndex = 0;
             while (currentIndex < index - 1) {
                 current = current.next;
                 currentIndex++;
             }
+            //make sure element after index are not null
             if (current.next != null) {
                 current.next = current.next.next;
             }
@@ -45,17 +54,18 @@ public class LinkedList {
         return list;
     }
     
-    
+    // Method to print the details of all players in the list
     public static void printList(LinkedList list) {
         Node node = list.head;
-
         while (node != null){
             System.out.println(node.data.printPlayer());
             node = node.next;
         }
     }
 
+    // Method to get the length of the list
     public int getLength() {
+        //iterate through list and add 1 to size each time
         int size = 0;
         Node current = this.head;
         while (current != null) {
@@ -65,9 +75,11 @@ public class LinkedList {
         return size;
     }
 
+    // Method to get a specific node by index
     public Node getNode(int index){
         Node current = this.head;
         int count = 0;
+        //iterate through list till index is found and always check if node is null before accessing
         while (current != null && current.next != null){
             if (count == index){
                 return current;
@@ -77,32 +89,4 @@ public class LinkedList {
         }
         return current;
     }
-
-    /*
-        Node[] array = new Node[size()];
-        int index = 0;
-        Node current = head;
-        while (current != null) {
-            array[index++] = current;
-            current = current.next;
-        }
-
-        if (!ascending) {
-            comparator = comparator.reversed();
-        }
-
-        // Sort the array of nodes based on the specified player
-        Arrays.sort(array, 0, size(), Comparator.comparing(node -> comparator.compare(node.data, node.data)));
-
-        // Reconstruct the linked list based on the sorted array
-        head = array[0];
-        current = head;
-        for (int i = 1; i < size(); i++) {
-            current.next = array[i];
-            current = current.next;
-        }
-        current.next = null;
-
-        saveDataToFile(); // Save changes to the file
-        */
-    }
+}

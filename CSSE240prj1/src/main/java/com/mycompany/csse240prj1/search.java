@@ -66,10 +66,10 @@ public class search {
         Scanner scan = new Scanner(System.in);
         System.out.println("What is the name you are searching for?");
         String input = scan.nextLine();
-        //search given array for matching with input
+        //search given list for matching with input
         for (int i = 0; i < list.getLength(); i++){
             if (list.getNode(i).data.getName().equals(input)){
-                //call resize array and add element if matches searched name equals stored name
+                //insert player into modified list of filtered results
                 this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
@@ -77,16 +77,15 @@ public class search {
     
     // Search by Team
     private void searchTeam(LinkedList list){
-        //declare and initialize pointer for new filter array
+        //declare and initialize pointer for new filter list
         int j = 0;
-        //prompt user for name input
+        //prompt user for Team input
         Scanner scan = new Scanner(System.in);
         System.out.println("What is the Team you are searching for?");
         String input = scan.nextLine();
-        //search given array for matching with input
+        //search given list for matching with input
         for (int i = 0; i < list.getLength(); i++){
             if (list.getNode(i).data.getTeam().equals(input)){
-                //call resize array and add element if matches searched name equals stored name
                 this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
@@ -94,16 +93,13 @@ public class search {
 
     // Search by Season
     private void searchSeason(LinkedList list){
-        //declare and initialize pointer for new filter array
         int j = 0;
-        //prompt user for name input
+        //prompt user for Season input
         Scanner scan = new Scanner(System.in);
         System.out.println("What is the Season you are searching for?");
         String input = scan.nextLine();
-        //search given array for matching with input
         for (int i = 0; i < list.getLength(); i++){
             if (list.getNode(i).data.getSeason().equals(input)){
-                //call resize array and add element if matches searched name equals stored name
                 this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
@@ -111,16 +107,13 @@ public class search {
 
     // Search by Position
     private void searchPosition(LinkedList list){
-        //declare and initialize pointer for new filter array
         int j = 0;
-        //prompt user for name input
+        //prompt user for Position input
         Scanner scan = new Scanner(System.in);
         System.out.println("What is the Position you are searching for?");
         int input = scan.nextInt();
-        //search given array for matching with input
         for (int i = 0; i < list.getLength(); i++){
             if (list.getNode(i).data.getPosition() == input){
-                //call resize array and add element if matches searched name equals stored name
                 this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
