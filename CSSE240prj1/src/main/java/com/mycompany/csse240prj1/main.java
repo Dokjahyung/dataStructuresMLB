@@ -67,7 +67,7 @@ public class main {
                 case 's':
                     //call the array sort method in mlbArray class
                     sort sort = new sort();
-                    LinkedList.printList(sort.listSort(mlbList, 0, mlbList.getLength()-2));
+                    LinkedList.printList(sort.listSort(mlbList));
                     break;
                 case 'q':
                     //call the array search method in mlbArray

@@ -6,16 +6,6 @@ package com.mycompany.csse240prj1;
 public class LinkedList {
     Node head;
 
-    public class Node{
-        Player data;
-        Node next;
-
-        public Node(Player data) {
-            this.data = data;
-            next = null;
-        }
-    }
-
     public static LinkedList insertPlayer(LinkedList list, Player data) {
         Node newNode = new Node(data);
         if (list.head == null){
@@ -83,11 +73,11 @@ public class LinkedList {
                 return current;
             }
             current = current.next;
+            count ++;
         }
         return current;
-
     }
-    
+
     /*
         Node[] array = new Node[size()];
         int index = 0;

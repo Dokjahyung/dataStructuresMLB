@@ -9,7 +9,7 @@ Albert Pujols, STL, 2009, 3
 Ryan Howard, PHI, 2006, 3
 Frank Thomas, CHW, 1994, 3
 Frank Thomas, CHW, 1993, 3
-Mo Vaughn, 1995, null, 3
+Mo Vaughn, MIN, 1995, null, 3
 Dustin Pedroia, BOS, 2008, 4
 Jeff Kent, SFG, 2000, 4
 Alex Rodriguez, NYY, 2007, 5
