@@ -71,12 +71,13 @@ public class main {
                     break;
                 case 'q':
                     //call the array search method in mlbArray
-                    //mlbArrays.arraySearch();
+                    search search = new search(mlbList);
                     break;
                 case 'f':
                     //finish program and call method for saving array back to file
                     
-                    //mlbArrays.mlbFinish();
+                    mlbListConstruct.lines = mlbList;
+                    mlbListConstruct.mlbFinish();
                     //change loop condition to end program
                     stop = 1;
                     break;

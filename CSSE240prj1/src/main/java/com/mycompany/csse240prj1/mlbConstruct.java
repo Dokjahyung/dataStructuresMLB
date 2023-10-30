@@ -19,7 +19,7 @@ import java.util.Scanner;
 //creat project
 public class mlbConstruct {
     //need to declare private field for our names array
-    private LinkedList lines = new LinkedList();
+    public LinkedList lines = new LinkedList();
 
     // make a basic constructor class for main method to call different methods of class and read original txt file
     public LinkedList mlbCreateList() {
@@ -62,16 +62,6 @@ public class mlbConstruct {
         return lines;
         
     }
-    /* 
-    //this is the method that will both istantiate an instance from sort class and start the sort script for dataset
-    public void arraySort(){
-        //the arguments here will be passed to sort class and will assume 0 is the lowest index of the list for this case
-        //sort arraySort = new sort(lines, 0, this.lines.length-1);
-    }
-    //method will instantiate array search and pass lines array for later use
-    public void arraySearch(){
-        search arraySearch = new search(lines);
-    }
     //create method to save array to text file via filewriter
     public void mlbFinish() {
         try {
@@ -79,8 +69,8 @@ public class mlbConstruct {
             FileWriter fw = new FileWriter("mlbNames.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             //each element gets it's own line when being re written
-            for (int i = 0; i < this.lines.length; i++) {
-                bw.write(this.lines[i].getName() + ", " + this.lines[i].getTeam() + ", " + this.lines[i].getSeason() + ", " + this.lines[i].getPosition());
+            for (int i = 0; i < this.lines.getLength(); i++) {
+                bw.write(this.lines.getNode(i).data.getName() + ", " + this.lines.getNode(i).data.getTeam() + ", " + this.lines.getNode(i).data.getSeason() + ", " + this.lines.getNode(i).data.getPosition());
                 bw.newLine();
             }
             //close buffered writer
@@ -92,5 +82,4 @@ public class mlbConstruct {
             e.getStackTrace();
         }
     }
-    */
 }

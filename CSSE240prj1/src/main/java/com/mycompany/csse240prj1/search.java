@@ -9,10 +9,10 @@ import java.util.Comparator;
 
 public class search {
     // Array to store filtered players
-    private Player[] filter = new Player[0];
+    public LinkedList filter = new LinkedList();
     
     // Constructor
-    public search(Player[] array){
+    public search(LinkedList list){
         //Establish scanner and prompt user through UI for input on search criteria
         Scanner scan = new Scanner(System.in);
         System.out.println("How would you like to search for your player by?");
@@ -24,19 +24,19 @@ public class search {
         switch (type){
             //case for filter by Name
             case 'n':
-                searchName(array);
+                searchName(list);
                 break;
             //case for filter by Team
             case 't':
-                searchTeam(array);
+                searchTeam(list);
                 break;
             //case for filter by Season
             case 's':
-                searchSeason(array);
+                searchSeason(list);
                 break;
             //case for filter by Position
             case 'p':
-                searchPosition(array);
+                searchPosition(list);
                 break;
             //if they gave a bad input then default will prompt them to try again from beginning in main
             default:
@@ -45,12 +45,12 @@ public class search {
         }
         System.out.println("RESULTS:");
         //if filter array has no items cut program and print no results
-        if (this.filter.length > 0){
+        if (this.filter.getLength() > 0){
             //print each player that matches searched criteria
-            for (int i = 0; i < this.filter.length; i++){
-                System.out.println(this.filter[i].printPlayer());
+            for (int i = 0; i < this.filter.getLength(); i++){
+                System.out.println(this.filter.getNode(i).data.printPlayer());
             }
-            System.out.println(this.filter.length + " results");
+            System.out.println(this.filter.getLength() + " results");
         }
         else {
             System.out.println("no results...");
@@ -59,7 +59,7 @@ public class search {
     }
 
     // Search by Name
-    private void searchName(Player[] array){
+    private void searchName(LinkedList list){
         //declare and initialize pointer for new filter array
         int j = 0;
         //prompt user for name input
@@ -67,53 +67,62 @@ public class search {
         System.out.println("What is the name you are searching for?");
         String input = scan.nextLine();
         //search given array for matching with input
-        for (int i = 0; i < array.length; i++){
-            if (array[i].getName().equals(input)){
+        for (int i = 0; i < list.getLength(); i++){
+            if (list.getNode(i).data.getName().equals(input)){
                 //call resize array and add element if matches searched name equals stored name
-                this.filter = resize.add(this.filter, array[i]);
+                this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
     } 
     
     // Search by Team
-    private Player[] searchTeam(Player[] array){
+    private void searchTeam(LinkedList list){
+        //declare and initialize pointer for new filter array
         int j = 0;
+        //prompt user for name input
         Scanner scan = new Scanner(System.in);
-        System.out.println("What is the team you are searching for?");
+        System.out.println("What is the Team you are searching for?");
         String input = scan.nextLine();
-        for (int i = 0; i < array.length; i++){
-            if (array[i].getTeam().equals(input)){
-                this.filter = resize.add(this.filter, array[i]);
+        //search given array for matching with input
+        for (int i = 0; i < list.getLength(); i++){
+            if (list.getNode(i).data.getTeam().equals(input)){
+                //call resize array and add element if matches searched name equals stored name
+                this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
-        return filter;
-    }
+    } 
 
     // Search by Season
-    private Player[] searchSeason(Player[] array){
+    private void searchSeason(LinkedList list){
+        //declare and initialize pointer for new filter array
         int j = 0;
+        //prompt user for name input
         Scanner scan = new Scanner(System.in);
-        System.out.println("What is the value you are searching with?");
+        System.out.println("What is the Season you are searching for?");
         String input = scan.nextLine();
-            for (int i = 0; i < array.length; i++){
-                if (array[i].getSeason().equals(input)){
-                    this.filter = resize.add(this.filter, array[i]);
-                }
-            }
-            return filter;
-    }
-
-    // Search by Position
-    private Player[] searchPosition(Player[] array){
-        int j = 0;
-        Scanner scan = new Scanner(System.in);
-        System.out.println("What is the value you are searching with?");
-        int input = scan.nextInt();
-        for (int i = 0; i < array.length; i++){
-            if (array[i].getPosition() ==  input){
-                this.filter = resize.add(this.filter, array[i]);
+        //search given array for matching with input
+        for (int i = 0; i < list.getLength(); i++){
+            if (list.getNode(i).data.getSeason().equals(input)){
+                //call resize array and add element if matches searched name equals stored name
+                this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
             }
         }
-        return filter;
-    }
+    } 
+
+    // Search by Position
+    private void searchPosition(LinkedList list){
+        //declare and initialize pointer for new filter array
+        int j = 0;
+        //prompt user for name input
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What is the Position you are searching for?");
+        int input = scan.nextInt();
+        //search given array for matching with input
+        for (int i = 0; i < list.getLength(); i++){
+            if (list.getNode(i).data.getPosition() == input){
+                //call resize array and add element if matches searched name equals stored name
+                this.filter = LinkedList.insertPlayer(this.filter, list.getNode(i).data);
+            }
+        }
+    } 
 }
