@@ -1,3 +1,5 @@
+/* MVP Season, League, Player Name, Team, WAR, batting average, On Base Percentage, Slugging Percentage, HR, RBI, Stolen Bases */
+
 2010,AL,Josh Hamilton,TEX,8.7,.359,.411,.633,32,100,8
 2010,NL,Joey Votto,CIN,7.0,.324,.424,.600,37,113,16
 
