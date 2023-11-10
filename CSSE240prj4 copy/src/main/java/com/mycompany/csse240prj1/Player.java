@@ -12,14 +12,16 @@ class Player{
 	    private String season;
 	  // numeric value 1-9 for position that player plays
 	    private int position;
-	    
+        //	stats linked list to store  
+        /*WAR, batting average, On Base Percentage, Slugging Percentage, HR, RBI, Stolen Bases */  
         private LinkedList stats = new LinkedList();
 
+        //constructor of player that takes all the way to position argument
         public Player(String name, String team, String season, int position){
-          setName(name);
-          setTeam(team);
-          setSeason(season);
-          setPosition(position);
+            setName(name);
+            setTeam(team);
+            setSeason(season);
+            setPosition(position);
         }
         public void setName(String name){
             if (validateTeam(name) == true){
@@ -83,7 +85,7 @@ class Player{
             return true;
         }
         public String getSeason(){
-          return this.season;
+            return this.season;
         }
 
         public void setPosition(int position){
@@ -98,13 +100,13 @@ class Player{
             Scanner scan = new Scanner(System.in);
             //fancy way of testing if team is a String 
             if(position > 0 && position < 10){
-              return true;
+                return true;
             }
             else{
-              System.out.println("Unfortunately this is NaN please retype and eligible integer for player position");
-              int finalPosition = scan.nextInt();
-              setPosition(finalPosition);
-              return false;
+                System.out.println("Unfortunately this is NaN please retype and eligible integer for player position");
+                int finalPosition = scan.nextInt();
+                setPosition(finalPosition);
+                return false;
             }
         }
         public int getPosition(){
@@ -124,9 +126,11 @@ class Player{
             return this.stats;
         }
         public void printPlayer(){
-          System.out.print("Player Name: " + this.getName() + " Team Name: " + this.getTeam() + " Season: " + this.getSeason() + " Position: " + this.getPosition() + " Statistics: ");
-          printPlayerStat();
-          System.out.println();
+            System.out.println("Player Name: " + this.getName() + " Team Name: " + this.getTeam() + " Season: " + this.getSeason() + " Position: " + this.getPosition());
+            System.out.print("              Statistics: ");
+            printPlayerStat();
+            System.out.println();
+            System.out.println();
         }
         public void printPlayerStat(){
             LinkedList.printStats(stats);

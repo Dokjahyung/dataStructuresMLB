@@ -20,6 +20,8 @@ public class main {
         //declare instance of mlbConstruct to call needed methods from this class as well as LinkedList
         mlbConstruct mlbListConstruct = new mlbConstruct();
         LinkedList mlbList= mlbListConstruct.mlbCreateList();
+        System.out.println("explanation of statistics format below");
+        new information();
         
         //create interface that infinitely loops as long as user wants
         while (stop == 0) {
@@ -50,8 +52,24 @@ public class main {
 
                     //call add method
                     Player mlbPlayer = new Player(mlbName, mlbTeam, mlbSeason, mlbPosition);
-                    mlbPlayer.setStats(null, null, null, null, null, null, null);
+                    //mlbPlayer.setStats(null, null, null, null, null, null, null);
                     mlbList = LinkedList.insertPlayer(mlbList, mlbPlayer);
+
+
+                    System.out.println("Will you be adding any stats to the player?");
+                    System.out.println("y = yes | n = no");
+                    String[] tempArray = new String[7];
+                    if (scan.next().charAt(0) == 'y'){
+                        scan.nextLine();
+                        System.out.println("Please type in the your player statistics with the following format.");
+                        information.inputInformationFormat();
+                        String line = scan.nextLine();
+                        tempArray = line.split(",");
+                        mlbPlayer.setStats(tempArray[0], tempArray[1], tempArray[2], tempArray[3], tempArray[4], tempArray[5], tempArray[6]);
+                    }
+                    else {
+                        mlbPlayer.setStats("-1","-1","-1","-1","a-1","-1","-1");
+                    }
                     LinkedList.printList(mlbList);
                     break;
                     //calls delete method from LinkedList class w/ following info

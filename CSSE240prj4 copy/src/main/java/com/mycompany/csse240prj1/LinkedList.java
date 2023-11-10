@@ -86,7 +86,7 @@ public class LinkedList {
     public static void printStats(LinkedList list) {
         Node node = list.head;
         while (node != null){
-            System.out.print(node.stat + " ");
+            System.out.print(node.stat + " | ");
             node = node.next;
         }
     }
