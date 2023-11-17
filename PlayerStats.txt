@@ -1,0 +1,64 @@
+/* MVP Season, League, Player Name, Team, WAR, batting average, On Base Percentage, Slugging Percentage, HR, RBI, Stolen Bases */
+
+2010,AL,Josh Hamilton,TEX,8.7,.359,.411,.633,32,100,8
+2010,NL,Joey Votto,CIN,7.0,.324,.424,.600,37,113,16
+
+2009,AL,Joe Mauer,MIN,7.8,.365,.444,.587,28,96,4
+2009,NL,Albert Pujols,STL,9.7,.327,.443,.658,47,135,16
+
+2008,AL,Dustin Pedroia,BOS,7.0,.326,.376,.493,17,83,20
+2008,NL,Albert Pujols,STL,9.2,.357,.462,.653,37,116,7
+
+2007,AL,Alex Rodriguez,NYY,9.4,.314,.422,.645,54,156,24
+2007,NL,Jimmy Rollins,PHI,6.1,.296,.344,.531,30,94,41
+
+2006,AL,Justin Morneau,MIN,4.3,.321,.375,.559,34,130,3
+2006,NL,Ryan Howard,PHI,5.2,.313,.425,.659,58,149,0
+
+2005,AL,Alex Rodriguez,NYY,9.4,.321,.421,.610,48,130,21
+2005,NL,Albert Pujols,STL,8.4,.330,.430,.609,41,117,16
+
+2004,AL,Vladimir Guerrero,ANA,5.6,.337,.391,.598,39,126,15
+2004,NL,Barry Bonds,SFG,10.6,.362,.609,.812,45,101,6
+
+2003,AL,Alex Rodriguez,TEX,8.4,.298,.396,.600,47,118,17
+2003,NL,Barry Bonds,SFG,9.2,.341,.529,.749,45,90,7
+
+2002,AL,Miguel Tejada,OAK,5.7,.308,.354,.508,34,131,7
+2002,NL,Barry Bonds,SFG,11.7,.370,.582,.799,46,110,9
+
+2001,AL,Ichiro Suzuki,SEA,7.7,.350,.381,.457,8,69,56
+2001,NL,Barry Bonds,SFG,11.9,.328,.515,.863,73,137,13
+
+2000,AL,Jason Giambi,OAK,7.8,.333,.476,.647,43,137,2
+2000,NL,Jeff Kent,SFG,7.2,.334,.424,.596,33,125,12
+
+1999,AL,Ivan Rodriguez,TEX,6.4,.332,.356,.558,35,113,25
+1999,NL,Chipper Jones,ATL,6.9,.319,.441,.633,45,110,25
+
+1998,AL,Juan Gonzalez,TEX,4.9,.318,.366,.630,45,157,2
+1998,NL,Sammy Sosa,CHC,6.5,.308,.377,.647,66,158,18
+
+1997,AL,Ken Griffey Jr.,SEA,9.1,.304,.382,.646,56,147,15
+1997,NL,Larry Walker,COL,9.8,.366,.452,.720,49,130,33
+
+1996,AL,Juan Gonzalez,TEX,3.8,.314,.368,.643,47,144,2
+1996,NL,Ken Caminiti,SDP,7.6,.326,.408,.621,40,130,11
+
+1995,AL,Mo Vaughn,BOS,4.3,.300,.388,.575,39,126,11
+1995,NL,Barry Larkin,CIN,5.9,.319,.394,.492,15,66,51
+
+1994,AL,Frank Thomas,CHW,6.4,.353,.487,.729,38,101,2
+1994,NL,Jeff Bagwell,HOU,8.2,.368,.451,.750,39,116,15
+
+1993,AL,Frank Thomas,CHW,6.2,.317,.426,.607,41,128,4
+1993,NL,Barry Bonds,SFG,9.9,.336,.458,.677,46,123,29
+
+1992,AL,Dennis Eckersley,OAK,2.9,,,,,,,7,1,51,1.91,80.0,93
+1992,NL,Barry Bonds,PIT,9.0,.311,.456,.624,34,103,39
+
+1991,AL,Cal Ripken Jr.,BAL,11.5,.323,.374,.566,34,114,6
+1991,NL,Terry Pendleton,ATL,6.1,.319,.363,.517,22,86,10
+
+1990,AL,Rickey Henderson,OAK,9.9,.325,.439,.577,28,61,65
+1990,NL,Barry Bonds,PIT,9.7,.301,.406,.565,33,114,52

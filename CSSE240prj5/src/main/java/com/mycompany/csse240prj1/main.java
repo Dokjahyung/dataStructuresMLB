@@ -50,7 +50,24 @@ public class main {
 
                     //call add method
                     Player mlbPlayer = new Player(mlbName, mlbTeam, mlbSeason, mlbPosition);
+                    //mlbPlayer.setStats(null, null, null, null, null, null, null);
                     mlbList = LinkedList.insertPlayer(mlbList, mlbPlayer);
+
+
+                    System.out.println("Will you be adding any stats to the player?");
+                    System.out.println("y = yes | n = no");
+                    String[] tempArray = new String[7];
+                    if (scan.next().charAt(0) == 'y'){
+                        scan.nextLine();
+                        System.out.println("Please type in the your player statistics in no particular order but split with commas");
+                        System.out.println("1,2,3,4,5,6,0");
+                        String line = scan.nextLine();
+                        tempArray = line.split(",");
+                        mlbPlayer.setStats(tempArray);
+                    }
+                    else {
+                        System.out.println("ok no stats for user");
+                    }
                     LinkedList.printList(mlbList);
                     break;
                     //calls delete method from LinkedList class w/ following info
